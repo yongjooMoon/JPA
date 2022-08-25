@@ -27,7 +27,7 @@ public class BoardApiController {
      * 게시글 생성
      */
     @PostMapping("/boards")
-    public String save(@RequestBody final BoardRequestDto params) {
+    public Long save(@RequestBody final BoardRequestDto params) {
         return boardService.save(params);
     }
 

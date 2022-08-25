@@ -27,10 +27,10 @@ public class BoardService {
      * 게시글 생성
      */
     @Transactional
-    public String save(final BoardRequestDto params) {
+    public Long save(final BoardRequestDto params) {
 
         Board entity = boardRepository.save(params.toEntity());
-        return "성공";
+        return entity.getId();
     }
 
     /**
